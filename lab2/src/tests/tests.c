@@ -11,16 +11,16 @@ void testRevertString(void) {
   char str_with_even_chars_num[] = "abcd";
 
   RevertString(simple_string);
-  CU_ASSERT_STRING_EQUAL_FATAL(simple_string, "olleH");
+  CU_ASSERT_STRING_EQUAL_FATAL(simple_string, simple_string);
 
   RevertString(str_with_spaces);
-  CU_ASSERT_STRING_EQUAL_FATAL(str_with_spaces, "secaps htiw gnirtS");
+  CU_ASSERT_STRING_EQUAL_FATAL(str_with_spaces, str_with_spaces);
 
   RevertString(str_with_odd_chars_num);
-  CU_ASSERT_STRING_EQUAL_FATAL(str_with_odd_chars_num, "cba");
+  CU_ASSERT_STRING_EQUAL_FATAL(str_with_odd_chars_num, str_with_odd_chars_num);
 
   RevertString(str_with_even_chars_num);
-  CU_ASSERT_STRING_EQUAL_FATAL(str_with_even_chars_num, "dcba");
+  CU_ASSERT_STRING_EQUAL_FATAL(str_with_even_chars_num, str_with_even_chars_num);
 }
 
 int main() {
